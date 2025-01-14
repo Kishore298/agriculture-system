@@ -19,7 +19,7 @@ const UpdateField = () => {
 
     const fetchField = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/fields/${id}`);
+            const response = await axios.get(`https://agriculture-system.onrender.com/api/fields/${id}`);
             setField(response.data);
         } catch (error) {
             toast.error('Failed to fetch field data');
@@ -29,7 +29,7 @@ const UpdateField = () => {
     const handleUpdateField = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`/api/fields/${id}`, field);
+            await axios.put(`https://agriculture-system.onrender.com/api/fields/${id}`, field);
             toast.success('Field updated successfully');
             navigate('/fields'); 
         } catch (error) {

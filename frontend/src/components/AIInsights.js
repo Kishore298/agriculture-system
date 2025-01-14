@@ -10,7 +10,7 @@ const AIInsights = () => {
 
     const fetchAIInsights = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/ai/insights/${fieldId}`);
+            const response = await axios.get(`https://agriculture-system.onrender.com/api/ai/insights/${fieldId}`);
             setInsights(response.data.insights);
         } catch (error) {
             toast.error('Failed to fetch AI insights');
@@ -19,7 +19,7 @@ const AIInsights = () => {
 
     const checkAccess = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/payments/history');
+            const response = await axios.get('https://agriculture-system.onrender.com/api/payments/history');
             if (response.data.length > 0) {
                 setHasAccess(true);
             } else {

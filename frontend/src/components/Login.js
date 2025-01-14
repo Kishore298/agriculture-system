@@ -11,7 +11,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/login', { username, password });
+            const response = await axios.post('https://agriculture-system.onrender.com/api/auth/login', { username, password });
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('username', username);
             toast.success('Login successful!');

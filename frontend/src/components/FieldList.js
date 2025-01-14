@@ -9,7 +9,7 @@ const FieldList = () => {
 
     const fetchFields = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/fields');
+            const response = await axios.get('https://agriculture-system.onrender.com/api/fields');
             setFields(response.data);
         } catch (error) {
             toast.error('Failed to fetch fields');
@@ -18,7 +18,7 @@ const FieldList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8000/api/fields/${id}`);
+            await axios.delete(`https://agriculture-system.onrender.com/api/fields/${id}`);
             fetchFields();
             toast.success('Field deleted successfully');
         } catch (error) {

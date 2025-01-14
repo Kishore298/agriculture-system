@@ -12,7 +12,7 @@ const Signup = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/signup', { username, password, role });
+            const response = await axios.post('https://agriculture-system.onrender.com/api/auth/signup', { username, password, role });
             toast.success(response.data.message);
             navigate("/home");
         } catch (error) {

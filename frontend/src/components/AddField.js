@@ -17,7 +17,7 @@ const AddField = () => {
     const handleAddField = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/api/fields', { 
+            await axios.post('https://agriculture-system.onrender.com/api/fields', { 
                 name, 
                 location, 
                 cropType, 
